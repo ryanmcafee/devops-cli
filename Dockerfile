@@ -16,6 +16,9 @@ RUN gpg --verify terraform_${TERRAFORM_VERSION}_SHA256SUMS.sig terraform_${TERRA
 RUN grep terraform_${TERRAFORM_VERSION}_linux_amd64.zip terraform_${TERRAFORM_VERSION}_SHA256SUMS | sha256sum -c -
 RUN unzip -j terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
+#Add Digital Ocean Cli Support
+FROM digitalocean/doctl:latest as digitalocean
+
 # Install Azure Cli, kubectl, helm, bash-completion, git, python, make and gcc
 FROM mcr.microsoft.com/azure-cli:${AZURE_CLI_VERSION}
 RUN apk add --no-cache bash-completion openssh-client ca-certificates git python3 python3-dev make gcc
@@ -25,5 +28,6 @@ RUN test -f /usr/share/bash-completion/completions/kubectl || kubectl completion
 RUN which helm || curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
 RUN test -f /usr/share/bash-completion/completions/helm || helm completion bash > /usr/share/bash-completion/completions/helm
 COPY --from=terraform /tmp/terraform /usr/bin/terraform
+COPY --from=digitalocean /app/doctl /usr/bin/doctl
 WORKDIR /workspace
 CMD ["bash"]
