@@ -1,4 +1,4 @@
-# Azure Cli, Python, Terraform, Kubectl & Helm
+# Azure Cli, Digital Ocean Cli, Python, Terraform, Kubectl & Helm
 
 ## Context
 
@@ -14,7 +14,7 @@ Development should be fun, not difficult. Don't you agree?
    
 ## What's included?
 
-Azure Cli, Kubectl, Terraform, Helm, Python
+Azure Cli, Digital Ocean Cli, Kubectl, Terraform, Helm, Python
 
 ## Usage
   
