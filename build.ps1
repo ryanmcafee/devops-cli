@@ -13,8 +13,8 @@ The version of the Azure cli to build and include in the image.
 [CmdletBinding()]
 Param(
     [string]$ALPINE_VERSION = "3.11.6",
-    [string]$TERRAFORM_VERSION = "0.12.2",
-    [string]$AZURE_CLI_VERSION = "2.5.0",
+    [string]$TERRAFORM_VERSION = "0.12.24",
+    [string]$AZURE_CLI_VERSION = "2.5.1",
     [Parameter(Position=0,Mandatory=$false,ValueFromRemainingArguments=$true)]
     [string[]]$Args
 )

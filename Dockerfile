@@ -1,10 +1,10 @@
 ARG ALPINE_VERSION=3.11.6
-ARG AZURE_CLI_VERSION=2.5.0
+ARG AZURE_CLI_VERSION=2.5.1
 
 # Build Terraform
 FROM alpine:${ALPINE_VERSION} as terraform
 WORKDIR /tmp
-ARG TERRAFORM_VERSION=0.12.2
+ARG TERRAFORM_VERSION=0.12.24
 RUN apk add --no-cache ca-certificates bash-completion gnupg curl unzip
 ADD https://keybase.io/hashicorp/pgp_keys.asc hashicorp.asc
 RUN gpg --import hashicorp.asc
