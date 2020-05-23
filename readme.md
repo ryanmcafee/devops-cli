@@ -18,7 +18,7 @@ Azure Cli, Digital Ocean Cli, Kubectl, Terraform, Helm, Python
 
 ## Usage
   
-    docker run -it --rm ryanmcafee/devops-cli:latest bash
+    docker run -it ryanmcafee/devops-cli:latest bash
 
 ## Building
 
