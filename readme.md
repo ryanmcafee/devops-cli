@@ -14,7 +14,7 @@ Development should be fun, not difficult. Don't you agree?
    
 ## What's included?
 
-Azure Cli, Digital Ocean Cli, Kubectl, Terraform, Helm, Python
+Azure Cli, Digital Ocean Cli, Kubectl, Terraform, Helm, Python, Powershell Support
 
 ## Usage
   
