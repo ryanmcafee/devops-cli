@@ -57,6 +57,8 @@ RUN tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
 RUN chmod +x /opt/microsoft/powershell/7/pwsh
 # Create the symbolic link that points to pwsh
 RUN ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
+RUN ln -s /opt/microsoft/powershell/7/pwsh /bin/pwsh
+
 
 # Bash shell auto completion support
 RUN echo -e "\n source /usr/share/bash-completion/bash_completion" >> ~/.bashrc
